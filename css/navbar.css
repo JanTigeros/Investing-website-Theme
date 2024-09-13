@@ -1,0 +1,201 @@
+/* Osnovni stili za telo */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Osnovni stili za navigacijo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: green;
+    z-index: 1000; /* Zagotovi, da je navigacija nad drugimi vsebinami */
+    display: flex; /* Naredi navigacijo fleksibilno */
+    justify-content: space-between; /* Prostor med levimi in desnimi elementi */
+    align-items: center; /* Sredi elementi navpično */
+    padding: 0 20px; /* Horizontalno obrezovanje */
+    box-sizing: border-box; /* Vključi obrezovanje v skupno širino elementa */
+    height: 80px; /* Nastavi višino */
+}
+
+/* Ozadje se spremeni ob scrollanju */
+.scrolled {
+    background-color: rgba(249, 249, 249, 0.95); /* Belo ozadje pri scrollanju */
+}
+
+/* Osnovni stili za seznam v navigaciji */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+nav .left-items,
+nav .right-items {
+    display: flex;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Postavi dropdown v sorazmerju z njegovim staršem */
+}
+
+nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: green;
+}
+
+nav a:hover {
+    background-color: #f0f0f0; /* Dodaj efekt ob prehodu */
+}
+
+/* Stili za dropdown meni */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Postavi ga prav pod starša li */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: green;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Stili za mobilni meni */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobilni meni */
+#mobileMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+/* Prikaz mobilnega menija */
+#mobileMenu.show {
+    display: block;
+}
+
+#mobileMenu .close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: green;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#mobileMenu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#mobileMenu li {
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#mobileMenu a {
+    color: green;
+    text-decoration: none;
+}
+
+#mobileMenu a:hover {
+    background-color: #ddd;
+}
+
+/* Mobilni dropdown meni */
+#mobileMenu .dropdown-content {
+    position: static; /* Zbriši absolutno pozicijo za mobilni meni */
+}
+
+#mobileMenu .dropdown-content {
+    display: none;
+    position: static; /* Zbriši absolutno pozicijo za mobilni meni */
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+#mobileMenu .dropdown-content a {
+    padding: 0px 10px;
+    color: green;
+}
+
+#mobileMenu .dropdown a:hover {
+    background-color: #ddd;
+}
+
+#mobileMenu .dropdown.open .dropdown-content {
+    display: block;
+}
+
+/* Prilagajanje za manjše zaslone */
+@media (max-width: 768px) {
+    nav ul {
+        display: none !important; /* Skrij navigacijo na manjših zaslonih */
+    }
+    .menu-toggle {
+        display: block;
+    }
+}

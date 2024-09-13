@@ -1,0 +1,147 @@
+/* index.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f9f9f9;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Remove bottom space below the image */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 128, 0, 0.8);
+    /* Green color with 0.8 opacity */
+    clip-path: polygon(66% 50%, 100% 0, 100% 20%, 100% 80%, 100% 100%, 20% 100%, 0 100%, 33% 50%);
+    pointer-events: none;
+    /* Allow clicks to pass through the overlay */
+}
+
+/* Card Section Styles */
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Space between cards */
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Light background color for the section */
+}
+
+.card {
+    background: #ffffff;
+    /* White background for cards */
+    padding: 20px;
+    width: 100%;
+    /* Full width on small screens */
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+    /* Ensure text is visible */
+}
+
+.card-icon {
+    width: 80px;
+    /* Adjust width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.card-content {
+    text-align: center;
+    /* Center text content */
+}
+
+.card-header {
+    font-size: 1.5rem;
+    /* Larger font size for the header */
+    margin-bottom: 10px;
+    /* Space below the header */
+    color: green;
+    /* Header color to match the theme */
+}
+
+.card-paragraph {
+    font-size: 1rem;
+    /* Adjust the font size of the paragraph */
+    color: black;
+    /* Ensure readability against the card background */
+}
+
+/* Responsive Design */
+
+/* On larger screens (desktops) */
+@media (min-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+        /* 50% width minus the gap between cards */
+    }
+}
+
+/* On smaller screens (tablets and phones) */
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}
+
+/*Green Div Section Styles*/
+
+
+.green-div {
+    background: rgba(0, 128, 0, 0.8);
+    /* Green color with 0.8 opacity */
+    color: white;
+    /* White text color for contrast */
+    padding: 20px;
+    /* Add padding for spacing */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+    margin: 20px auto;
+    /* Center the div horizontally with margin */
+    max-width: 800px;
+    /* Optional: limit the width */
+    text-align: center;
+    /* Center align text */
+}
+
+.green-div h1 {
+    font-size: 2rem;
+    /* Adjust the font size of the heading */
+    margin-bottom: 1rem;
+    /* Space below the heading */
+}
+
+.green-div p {
+    font-size: 1rem;
+    /* Adjust the font size of the paragraph */
+    line-height: 1.6;
+    /* Line height for better readability */
+    margin: 0;
+    /* Remove default margin */
+}

@@ -1,5 +1,9 @@
 /* index.css */
 
+html {
+  scroll-behavior: smooth;  /* Dodaja gladek pomik pri uporabi povezav */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@ body {
 .image-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
     /* Adjust the height as needed */
     overflow: hidden;
 }
@@ -25,18 +29,16 @@ body {
     /* Remove bottom space below the image */
 }
 
-.overlay {
+/*.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 128, 0, 0.8);
-    /* Green color with 0.8 opacity */
     clip-path: polygon(66% 50%, 100% 0, 100% 20%, 100% 80%, 100% 100%, 20% 100%, 0 100%, 33% 50%);
     pointer-events: none;
-    /* Allow clicks to pass through the overlay */
-}
+}*/
 
 /* Image slider */
 
@@ -172,12 +174,8 @@ body {
     /* White text color for contrast */
     padding: 20px;
     /* Add padding for spacing */
-    border-radius: 8px;
-    /* Optional: rounded corners */
     margin: 20px auto;
     /* Center the div horizontally with margin */
-    max-width: 800px;
-    /* Optional: limit the width */
     text-align: center;
     /* Center align text */
 }
@@ -196,4 +194,139 @@ body {
     /* Line height for better readability */
     margin: 0;
     /* Remove default margin */
+}
+
+.green-div-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+}
+
+.green-div-content h1 {
+  text-align: center;
+}
+
+.green-div-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.green-div-column {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Make columns stack on smaller screens */
+@media (max-width: 768px) {
+  .green-div-column {
+    flex: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Pricing section */
+.pricing-section {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.toggle-container {
+  margin-bottom: 40px;
+}
+
+.toggle-container input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-container label {
+  cursor: pointer;
+  background-color: #005600;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-container input[type="checkbox"]:checked + label {
+  background-color: #005600;
+  color: #fff;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pricing-card {
+  background-color: #005600;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spread, keeping the button at the bottom */
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.price {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.pricing-tip {
+  color: lightgray;
+  font-style: italic;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #329832; /* Adjust color if needed */
+  margin: 20px 0; /* Adds space around the line */
+  margin-top: 4px;
+}
+
+.features {
+  list-style: circle;
+  text-align: left;
+  padding: 0;
+  margin: 20px 30px;
+  flex-grow: 1; /* Allows features to take up extra space and push the button down */
+}
+
+.features li {
+  margin-bottom: 10px;
+}
+
+.pricing-button {
+  background-color: #329832;
+  color: white;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 110%;
+  margin-top: auto; /* Ensures button stays at the bottom */
+}
+
+.pricing-button:hover {
+  background-color: #329832;
+}
+
+/* Make pricing cards stack on smaller screens */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

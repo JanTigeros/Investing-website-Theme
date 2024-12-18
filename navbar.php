@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar with Dropdowns</title>
+    <title>NextGen Capital</title>
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 
@@ -29,6 +29,7 @@
                     <a href="#">Submenu 3</a>
                 </div>
             </li>
+            <li><a href="#Pricing">Pricing</a></li>
             <li><a href="#">Partners</a></li>
             <li><a href="#">About</a></li>
         </ul>
@@ -66,6 +67,7 @@
                     <a href="#">Submenu 3</a>
                 </div>
             </li>
+            <li><a href="#Pricing">Pricing</a></li>
             <li><a href="#">Partners</a></li>
             <li><a href="#">About</a></li>
             <li class="dropdown">

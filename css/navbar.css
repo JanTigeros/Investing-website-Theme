@@ -1,4 +1,9 @@
-/* Osnovni stili za telo */
+/* navbar.css */
+
+html {
+    scroll-behavior: smooth;  /* Dodaja gladek pomik pri uporabi povezav */
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -11,13 +16,13 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #f9f9f9;
-    color: green;
+    background-color: transparent;
+    color: #f9f9f9;
     z-index: 1000; /* Zagotovi, da je navigacija nad drugimi vsebinami */
     display: flex; /* Naredi navigacijo fleksibilno */
     justify-content: space-between; /* Prostor med levimi in desnimi elementi */
     align-items: center; /* Sredi elementi navpično */
-    padding: 0 20px; /* Horizontalno obrezovanje */
+    padding: 0 10%; /* Horizontalno obrezovanje */
     box-sizing: border-box; /* Vključi obrezovanje v skupno širino elementa */
     height: 80px; /* Nastavi višino */
 }
@@ -25,6 +30,10 @@ nav {
 /* Ozadje se spremeni ob scrollanju */
 .scrolled {
     background-color: rgba(249, 249, 249, 0.95); /* Belo ozadje pri scrollanju */
+}
+
+.scrolled a {
+    color: green;
 }
 
 /* Osnovni stili za seznam v navigaciji */
@@ -50,11 +59,11 @@ nav a {
     display: block;
     padding: 14px 20px;
     text-decoration: none;
-    color: green;
+    color: #f9f9f9;
 }
 
 nav a:hover {
-    background-color: #f0f0f0; /* Dodaj efekt ob prehodu */
+    color: green;
 }
 
 /* Stili za dropdown meni */
@@ -91,7 +100,7 @@ nav a:hover {
     display: block;
 }
 
-.image-container {
+/*.image-container {
     position: relative;
     width: 100%;
     height: 500px;
@@ -104,7 +113,7 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-}
+}*/
 
 /* Stili za mobilni meni */
 .menu-toggle {

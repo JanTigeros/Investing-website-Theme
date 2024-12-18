@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NextGen Capital</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 <body>
     <?php include 'navbar.php'; ?>
     <div class="image-container">
-        <img src="img/investitor.jpg" alt="Background Image">
+        <img src="img/banner_2.jpg" alt="Background Image">
         <div class="overlay"></div>
     </div>
     <div class="logos">
@@ -109,18 +109,105 @@
             </div>
         </div>
     </section>
-    <div class="green-div">
-        <h1>WHAT IS VALUE INVESTING?</h1>
-        <p>Value investing is an investment paradigm that involves investing in stocks that are overlooked by the
-            market and are being traded below their true worth. A stock's true worth is its intrinsic value, which is
-            commonly calculated using a DCF valuation model.
-            <br><br>
-            At ValueInvesting.io, we fully automate the process of obtaining the intrinsic value for all stocks
-            globally, and offer investors institutional-quality resources that were once only available to Wall
-            Street professionals:
-        </p>
-    </div>
+    <div class="green-div" id="Pricing">
+        <div class="green-div-content">
+            <h1>WHAT IS VALUE INVESTING?</h1>
+            <p>At NextGen Capital, we provide expert guidance and personalized investment strategies to help you achieve
+                your financial goals.
+                Our easy-to-use platform offers real-time market insights and customized stock recommendations tailored
+                to your needs.
+                With advanced security and a team of dedicated professionals, your investments are in safe hands.
+                Whether you're a beginner or an experienced investor,
+                we offer the tools and support to help you grow your wealth confidently. Invest smarter, invest with
+                NextGen Capital.
+                <br><br>
+            </p>
+            <div class="green-div-container">
+                <div class="green-div-column">
+                    <p>Tailored Recommendations
+                    <p>
+                    <p>We provide personalized stock picks and strategies to help you maximize your investment
+                        potential.</p>
+                </div>
+                <div class="green-div-column">
+                    <p>Cutting-Edge Tools
+                    <p>
+                    <p>Leverage advanced technology to make informed decisions based on real-time data and predictive
+                        analytics.</p>
+                </div>
+                <div class="green-div-column">
+                    <p>Expert Support
+                    <p>
+                    <p>Our dedicated support team is available around the clock to answer questions and provide
+                        guidance.</p>
+                </div>
+            </div>
 
+            <div class="pricing-section">
+                <div class="toggle-container">
+                    <input type="checkbox" id="price-toggle" />
+                    <label for="price-toggle" id="price-toggle-text">Toggle to Annual Pricing</label>
+                </div>
+
+                <div class="pricing-container">
+                    <!-- Pricing Card 1 -->
+                    <div class="pricing-card">
+                        <h3>Basic Plan</h3>
+                        <div class="price" data-monthly="10€/month" data-annual="100€/year">10€/month</div>
+                        <p class="pricing-tip">Perfect for New Investors<p>
+                        <hr class="divider">
+                        <ul class="features">
+                            <li>Access to our easy-to-use investment platform</li>
+                            <li>Real-time stock tracking and data</li>
+                            <li>Educational resources and tutorials</li>
+                            <li>Basic portfolio management tools</li>
+                            <li>Email customer support</li>
+                        </ul>
+                        <button class="pricing-button">START FREE TRAIL</button>
+                    </div>
+
+                    <!-- Pricing Card 2 -->
+                    <div class="pricing-card">
+                        <h3>Pro Plan</h3>
+                        <div class="price" data-monthly="30€/month" data-annual="300€/year">30€/month</div>
+                        <p class="pricing-tip">For the Growing Investor<p>
+                        <hr class="divider">
+                        <ul class="features">
+                            <li>Everything in the Basic Plan, plus:</li>
+                            <li>Personalized stock recommendations</li>
+                            <li>Advanced portfolio tracking and analysis</li>
+                            <li>In-depth market research reports</li>
+                            <li>Priority email and chat support</li>
+                            <li>Quarterly investment strategy reviews with a financial advisor</li>
+                        </ul>
+                        <button class="pricing-button">START FREE TRAIL</button>
+                    </div>
+
+                    <!-- Pricing Card 3 -->
+                    <div class="pricing-card">
+                        <h3>Premium Plan</h3>
+                        <div class="price" data-monthly="75€/month" data-annual="750€/year">75€/month</div>
+                        <p class="pricing-tip">For the Serious Investor<p>
+                        <hr class="divider">
+                        <ul class="features">
+                            <li>Everything in the Pro Plan, plus:</li>
+                            <li>Unlimited access to all premium research and analytics tools</li>
+                            <li>Direct, on-demand consultations with financial experts</li>
+                            <li>Customized investment strategies based on your goals</li>
+                            <li>VIP customer support with 24/7 access</li>
+                            <li>Exclusive webinars and market insights from top industry experts</li>
+                        </ul>
+                        <button class="pricing-button">START FREE TRAIL</button>
+                    </div>
+                </div>
+                <script src="js/pricing-script.js"></script>
+            </div>
+        </div>
+    </div>
+    <?php
+        include 'footer.php';
+    ?>
+    <script src="js/smoothScroll.js"></script>
 </body>
 
 </html>

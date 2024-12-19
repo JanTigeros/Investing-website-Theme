@@ -13,38 +13,38 @@
         <div class="footer-container">
             <!-- Prvi stolpec (logo in podatki podjetja) -->
             <div class="footer-column footer-column-1">
-                <img src="logo.png" alt="Logo" class="footer-logo">
-                <p><strong>PODJETJE D.O.O.</strong></p>
-                <p>Naslov: Ulica 123, 1000 Ljubljana</p>
-                <p>Email: info@podjetje.si</p>
-                <p>Telefon: +386 1 234 5678</p>
+                <img src="img/NextGen-Small.png" alt="Logo" class="footer-logo">
+                <p><strong>NextGen d.o.o.</strong>
+                <br>Address: Ulica 123, 1000 Ljubljana
+                <br>Support: support@nextgen.si
+                <br>Sales: sales@nextgen.si
             </div>
 
             <!-- Drugi stolpec (linki) -->
             <div class="footer-column">
-                <h3>Povezave</h3>
+                <h3>Links</h3>
                 <ul>
-                    <li><a href="#home">Domov</a></li>
-                    <li><a href="#about">O nas</a></li>
-                    <li><a href="#services">Storitve</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#home">Welcome</a></li>
+                    <li><a href="#about">NextGenAI</a></li>
+                    <li><a href="#services">Pricing</a></li>
+                    <li><a href="#contact">Partners</a></li>
+                    <li><a href="#contact">About</a></li>
                 </ul>
             </div>
 
             <!-- Tretji stolpec (linki) -->
             <div class="footer-column">
-                <h3>Podpora</h3>
+                <h3>Links</h3>
                 <ul>
-                    <li><a href="#faq">Pogosta vprašanja</a></li>
-                    <li><a href="#terms">Pogoji uporabe</a></li>
-                    <li><a href="#privacy">Politika zasebnosti</a></li>
-                    <li><a href="#returns">Vračila</a></li>
+                    <li><a href="#faq">FQAs</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
                 </ul>
             </div>
 
             <!-- Četrti stolpec (linki) -->
             <div class="footer-column">
-                <h3>Socialna omrežja</h3>
+                <h3>Connect</h3>
                 <ul>
                     <li><a href="https://facebook.com">Facebook</a></li>
                     <li><a href="https://twitter.com">Twitter</a></li>
@@ -56,7 +56,7 @@
 
         <!-- Spodnji del s copyrightom -->
         <div class="footer-bottom">
-            <p>&copy; 2024 Podjetje d.o.o. Vse pravice pridržane.</p>
+            <p>&copy; 2024 NextGen d.o.o. All Rights Reserved .</p>
         </div>
     </footer>
 </body>

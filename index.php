@@ -154,8 +154,9 @@
                     <div class="pricing-card">
                         <h3>Basic Plan</h3>
                         <div class="price" data-monthly="10€/month" data-annual="100€/year">10€/month</div>
-                        <p class="pricing-tip">Perfect for New Investors<p>
-                        <hr class="divider">
+                        <p class="pricing-tip">Perfect for New Investors
+                        <p>
+                            <hr class="divider">
                         <ul class="features">
                             <li>Access to our easy-to-use investment platform</li>
                             <li>Real-time stock tracking and data</li>
@@ -170,8 +171,9 @@
                     <div class="pricing-card">
                         <h3>Pro Plan</h3>
                         <div class="price" data-monthly="30€/month" data-annual="300€/year">30€/month</div>
-                        <p class="pricing-tip">For the Growing Investor<p>
-                        <hr class="divider">
+                        <p class="pricing-tip">For the Growing Investor
+                        <p>
+                            <hr class="divider">
                         <ul class="features">
                             <li>Everything in the Basic Plan, plus:</li>
                             <li>Personalized stock recommendations</li>
@@ -187,8 +189,9 @@
                     <div class="pricing-card">
                         <h3>Premium Plan</h3>
                         <div class="price" data-monthly="75€/month" data-annual="750€/year">75€/month</div>
-                        <p class="pricing-tip">For the Serious Investor<p>
-                        <hr class="divider">
+                        <p class="pricing-tip">For the Serious Investor
+                        <p>
+                            <hr class="divider">
                         <ul class="features">
                             <li>Everything in the Pro Plan, plus:</li>
                             <li>Unlimited access to all premium research and analytics tools</li>
@@ -204,6 +207,9 @@
             </div>
         </div>
     </div>
+    <?php
+        include 'feedback.php'
+    ?>
     <?php
         include 'footer.php';
     ?>

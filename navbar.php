@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/NextGen.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/NextGen.ico" type="image/x-icon">
     <title>NextGen Capital</title>
     <link rel="stylesheet" href="css/navbar.css">
 </head>
@@ -12,17 +14,10 @@
     <nav>
         <div class="menu-toggle" id="menuToggle">☰</div>
         <ul class="left-items">
-            <li><a href="#">LOGO</a></li>
+            <li><img src="img/NextGen-White.png" alt="Logo"></li>
+            <li><a href="index.php">Welcome</a></li>
             <li class="dropdown">
-                <a href="#">Welcome</a>
-                <div class="dropdown-content">
-                    <a href="#">Submenu 1</a>
-                    <a href="#">Submenu 2</a>
-                    <a href="#">Submenu 3</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#">Business</a>
+                <a href="#">NextGenAI</a>
                 <div class="dropdown-content">
                     <a href="#">Submenu 1</a>
                     <a href="#">Submenu 2</a>

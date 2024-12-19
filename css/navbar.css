@@ -25,6 +25,7 @@ nav {
     padding: 0 10%; /* Horizontalno obrezovanje */
     box-sizing: border-box; /* Vključi obrezovanje v skupno širino elementa */
     height: 80px; /* Nastavi višino */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 /* Ozadje se spremeni ob scrollanju */
@@ -53,6 +54,12 @@ nav li {
     margin: 0;
     padding: 0;
     position: relative; /* Postavi dropdown v sorazmerju z njegovim staršem */
+}
+
+nav li img {
+    height: 48px;
+    padding: 2px 20px;
+    transition: opacity 0.3s ease;
 }
 
 nav a {
@@ -206,5 +213,9 @@ nav a:hover {
     }
     .menu-toggle {
         display: block;
+    }
+
+    .scrolled {
+        display: none;
     }
 }

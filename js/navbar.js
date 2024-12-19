@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenu = document.getElementById('closeMenu');
     const dropdowns = document.querySelectorAll('#mobileMenu .dropdown');
+    const logo = document.querySelector('nav img');
 
     // Toggle mobile menu on button click
     menuToggle.addEventListener('click', function() {
@@ -33,8 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.querySelector('nav');
         if (window.scrollY > 0) {
             navbar.classList.add('scrolled');
+            logo.src = 'img/NextGen.png';
         } else {
             navbar.classList.remove('scrolled');
+            logo.src = 'img/NextGen-White.png';
         }
     });
 });

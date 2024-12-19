@@ -1,0 +1,196 @@
+/* Feedback container */
+.feedback-container {
+    margin: 40px auto;
+    padding: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
+  
+  .feedback-container h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-description p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .feedback-graph {
+    background-color: #ddd;
+    border-radius: 25px;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-graph .bar {
+    background-color: #4CAF50; /* Barva grafa */
+    height: 100%;
+    border-radius: 25px;
+    transition: width 1s ease-in-out; /* Animacija širjenja */
+  }
+  
+  .feedback-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .feedback-value {
+    font-weight: bold;
+  }
+  
+  .feedback-percent {
+    font-weight: bold;
+    color: #4CAF50;
+  }
+
+/* Odzivi */
+.reviews-container {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 400px; /* Dovolj prostora za odzive */
+    display: flex;
+    justify-content: space-between;
+    transition: transform 1s ease;
+  }
+  
+  .reviews-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .review {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    height: 80%;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    position: absolute;
+  }
+  
+  .review .review-header {
+    margin-bottom: 10px;
+  }
+  
+  .review .quote {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .review .rating {
+    margin-top: 10px;
+    color: #FFD700;
+  }
+  
+  .review .rating .star {
+    font-size: 1.2em;
+  }
+  
+  .review .review-text {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  .review .review-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.8em;
+    color: #777;
+  }
+  
+  .review .date {
+    text-align: left;
+  }
+  
+  .review .author {
+    text-align: right;
+  }
+  
+  /* Style za levi odziv */
+  .review.left {
+    left: 0;
+    transform: scale(1); /* Levi odziv je manjši */
+  }
+  
+  /* Style za sredinski odziv */
+  .review.center {
+    left: 50%;
+    transform: translateX(-50%) scale(1.2); /* Srednji odziv je večji in poravnan na sredino */
+  }
+  
+  /* Style za desni odziv */
+  .review.right {
+    right: 0;
+    transform: scale(1); /* Desni odziv je manjši */
+  }
+  
+  /* Style za skrite odzive */
+  .review.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    position: absolute;
+  }
+  
+  /* Animacija preklapljanja pozicij */
+  @keyframes moveReviews {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Responsivnost za manjše naprave (telefoni) */
+  @media (max-width: 768px) {
+    .feedback-container {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    /* Na manjših zaslonih (mobilni telefoni) bomo prikazali samo sredinski odziv */
+    .reviews-container {
+      height: 250px;
+    }
+  
+    .reviews-wrapper {
+      display: block;
+      position: relative;
+    }
+  
+    .review {
+      display: none; /* Skrijemo vse odzive razen sredinskega */
+      width: auto;
+      height: auto;
+    }
+  
+    .review.center {
+      display: flex;
+      position: relative; /* Sredinski odziv bo prikazan */
+      transform: translateX(0); /* Brez premika */
+      left: 0%;
+    }
+  }

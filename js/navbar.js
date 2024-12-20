@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenu = document.getElementById('closeMenu');
     const dropdowns = document.querySelectorAll('#mobileMenu .dropdown');
-    const logo = document.querySelector('nav img');
+    const logo = document.querySelector('nav #logo');
 
     // Toggle mobile menu on button click
     menuToggle.addEventListener('click', function() {

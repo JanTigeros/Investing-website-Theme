@@ -16,9 +16,14 @@
 <body>
     <?php include 'navbar.php'; ?>
     <div class="image-container">
-        <img src="img/banner_2.jpg" alt="Background Image">
-        <div class="overlay"></div>
+    <img src="img/banner_2.jpg" alt="Background Image">
+    <!-- Add a container for the text and button -->
+    <div class="content-overlay">
+        <h2 class="overlay-text">Empower the Next Generation</h2>
+        <p class="overlay-paragraph">NextGen is a platform dedicated to helping you invest in the future. We focus on opportunities that will create long-lasting positive impact, ensuring a better life for the next generation.</p>
+        <button class="overlay-button">Checkout our NextGen AI</button>
     </div>
+</div>
     <div class="logos">
         <div class="logo_items">
             <img src="img/Logo1.png" alt="Image 1">

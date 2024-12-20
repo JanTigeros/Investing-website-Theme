@@ -1,8 +1,7 @@
-/* navbar.css */
-
+/* Navbar stili */
 html {
     scroll-behavior: smooth;  /* Dodaja gladek pomik pri uporabi povezav */
-  }
+}
 
 body {
     margin: 0;
@@ -111,21 +110,6 @@ nav a:hover {
     color: red;
 }
 
-/*.image-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin-top: 80px;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}*/
-
 /* Stili za mobilni meni */
 .menu-toggle {
     display: none;
@@ -185,12 +169,12 @@ nav a:hover {
 
 /* Mobilni dropdown meni */
 #mobileMenu .dropdown-content {
-    position: static; /* Zbriši absolutno pozicijo za mobilni meni */
+    position: static;
 }
 
 #mobileMenu .dropdown-content {
     display: none;
-    position: static; /* Zbriši absolutno pozicijo za mobilni meni */
+    position: static;
     background-color: white;
     padding: 0;
     margin: 0;
@@ -199,7 +183,6 @@ nav a:hover {
 
 #mobileMenu .dropdown-content a {
     padding: 0px 10px;
-    color: green;
 }
 
 #mobileMenu .dropdown a:hover {
@@ -210,13 +193,45 @@ nav a:hover {
     display: block;
 }
 
+/* Logo and NextGen Name on the right side of mobile menu */
+.mobile-logo-container {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile-logo {
+    width: auto;
+    height: 36px;
+}
+
+.mobile-name {
+    font-size: 1.4em;
+    color: white;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
 /* Prilagajanje za manjše zaslone */
 @media (max-width: 768px) {
-    nav ul {
-        display: none !important; /* Skrij navigacijo na manjših zaslonih */
+    /* Show mobile logo and name */
+    .mobile-logo-container {
+        display: flex;
     }
+
+    /* Hide default logo and name on left side */
+    nav .left-items {
+        display: none !important;
+    }
+
+    /* Show menu toggle button on mobile */
     .menu-toggle {
         display: block;
+    }
+
+    /* Hide navigation links on mobile */
+    nav ul {
+        display: none !important;
     }
 
     .scrolled {

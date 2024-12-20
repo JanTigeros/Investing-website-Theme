@@ -4,6 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeMenu = document.getElementById('closeMenu');
     const dropdowns = document.querySelectorAll('#mobileMenu .dropdown');
     const logo = document.querySelector('nav #logo');
+    const rightMenu = document.querySelectorAll('nav .right-items a');
+    const navbar = document.querySelector('nav');
+    const currentPage = window.location.pathname;
+
+    if (currentPage.includes('index') || currentPage.includes('')) {
+        logo.src = 'img/NextGen-White.png';
+        navbar.classList.remove('black');
+    } 
+    else {
+        logo.src = 'img/NextGen.png';
+        navbar.classList.add('black');
+    }
 
     // Toggle mobile menu on button click
     menuToggle.addEventListener('click', function() {
@@ -31,13 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Change navbar background on scroll
     window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('nav');
         if (window.scrollY > 0) {
             navbar.classList.add('scrolled');
             logo.src = 'img/NextGen.png';
         } else {
             navbar.classList.remove('scrolled');
-            logo.src = 'img/NextGen-White.png';
+            if (currentPage.includes('index')) {
+                logo.src = 'img/NextGen-White.png';
+            }
         }
     });
 });

@@ -1,13 +1,16 @@
-/* Navbar stili */
+/* navbar.css */
 html {
     scroll-behavior: smooth;  /* Dodaja gladek pomik pri uporabi povezav */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: "Kanit", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      background-color: #f9f9f9;
+  }
 
 /* Osnovni stili za navigacijo */
 nav {
@@ -34,6 +37,26 @@ nav {
 
 .scrolled a {
     color: green;
+}
+
+.white{
+    color: white !important;
+}
+
+.green a {
+    color: green;
+}
+
+.black a {
+    color: black;
+}
+
+.black a:hover {
+    color: #555;
+}
+
+.black .dropdown-content a {
+    color: black;
 }
 
 /* Osnovni stili za seznam v navigaciji */

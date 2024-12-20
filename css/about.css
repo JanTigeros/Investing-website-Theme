@@ -1,0 +1,104 @@
+/* about.css */
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 764px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.8;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the content */
+    text-align: center;
+    color: black;
+    padding: 0 20px;
+    width: 100%; /* Ensures content is centered */
+}
+
+.overlay-text {
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.overlay-paragraph {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 80%; /* Prevent text from getting too wide */
+    margin-left: auto;
+    margin-right: auto; /* Center the paragraph */
+}
+
+.overlay-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50; /* Green button */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 16px #45a049;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.overlay-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0px 4px 20px #45a049;
+    color: white;
+}
+
+/* Prilagoditve za večje zaslone (namizje) */
+@media (min-width: 768px) {
+    .content-overlay {
+        text-align: left;
+        left: 10%; /* Align to the left */
+        right: 50%;
+        transform: translate(0, -50%); /* Keep it vertically centered but aligned left */
+        width: 50%; /* Content will be limited to the left half of the screen */
+    }
+
+    .overlay-text {
+        font-size: 3em;
+        text-align: left;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    .overlay-paragraph {
+        font-size: 1.1em;
+        max-width: 50%; /* Center text in the left half */
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .overlay-button {
+        margin-top: 20px;
+    }
+}
+
+/* Adjustments for mobile view (width < 768px) */
+@media (max-width: 767px) {
+    .overlay-text {
+        font-size: 2em;
+    }
+
+    .overlay-paragraph {
+        font-size: 0.8em;
+        max-width: 100%;
+    }
+}

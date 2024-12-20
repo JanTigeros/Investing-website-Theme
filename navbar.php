@@ -10,7 +10,7 @@ $_SESSION['loggedIn'] = true;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/NextGen.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/NextGen.ico" type="image/x-icon">
-    <title>NextGen Capital</title>
+    <title>NextGen</title>
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 
@@ -32,7 +32,7 @@ $_SESSION['loggedIn'] = true;
             <li><a href="index.php">NextGenAI</a></li>
             <li><a href="#Pricing">Pricing</a></li>
             <li><a href="#">Partners</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
         </ul>
 
         <!-- Right items (user menu) -->

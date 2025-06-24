@@ -1,6 +1,6 @@
 /* navbar.css */
 html {
-    scroll-behavior: smooth;  /* Dodaja gladek pomik pri uporabi povezav */
+    scroll-behavior: smooth;  /* Smooth scroll animation */
   }
   
   body {
@@ -12,7 +12,7 @@ html {
       background-color: #f9f9f9;
   }
 
-/* Osnovni stili za navigacijo */
+/* Navbar style */
 nav {
     position: fixed;
     top: 0;
@@ -20,19 +20,19 @@ nav {
     width: 100%;
     background-color: transparent;
     color: #f9f9f9;
-    z-index: 1000; /* Zagotovi, da je navigacija nad drugimi vsebinami */
-    display: flex; /* Naredi navigacijo fleksibilno */
-    justify-content: space-between; /* Prostor med levimi in desnimi elementi */
-    align-items: center; /* Sredi elementi navpično */
-    padding: 0 10%; /* Horizontalno obrezovanje */
-    box-sizing: border-box; /* Vključi obrezovanje v skupno širino elementa */
-    height: 80px; /* Nastavi višino */
+    z-index: 1000; /* Navbar on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-sizing: border-box;
+    height: 80px; /* Navbar height setting */
     transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-/* Ozadje se spremeni ob scrollanju */
+/* navbar style when scrolled */
 .scrolled {
-    background-color: rgba(249, 249, 249, 0.95); /* Belo ozadje pri scrollanju */
+    background-color: rgba(249, 249, 249, 0.95); /* White bg when scrolled */
 }
 
 .scrolled a {
@@ -59,7 +59,8 @@ nav {
     color: black;
 }
 
-/* Osnovni stili za seznam v navigaciji */
+
+/* Style for list in navigation */
 nav ul {
     margin: 0;
     padding: 0;
@@ -75,7 +76,7 @@ nav .right-items {
 nav li {
     margin: 0;
     padding: 0;
-    position: relative; /* Postavi dropdown v sorazmerju z njegovim staršem */
+    position: relative;
 }
 
 nav li img {
@@ -95,7 +96,7 @@ nav a:hover {
     color: green;
 }
 
-/* Stili za dropdown meni */
+/* Style for dropdown menu */
 .dropdown {
     position: relative;
 }
@@ -103,7 +104,7 @@ nav a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* Postavi ga prav pod starša li */
+    top: 100%;
     left: 0;
     background-color: white;
     min-width: 160px;
@@ -133,14 +134,14 @@ nav a:hover {
     color: red;
 }
 
-/* Stili za mobilni meni */
+/* Style for mobile */
 .menu-toggle {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* Mobilni meni */
+/* Mobile menu */
 #mobileMenu {
     display: none;
     position: fixed;
@@ -155,9 +156,13 @@ nav a:hover {
     overflow-y: auto;
 }
 
-/* Prikaz mobilnega menija */
+/* Show mobile menu */
 #mobileMenu.show {
     display: block;
+}
+
+mobile-menu-scrolled {
+    background-color: rgba(249, 249, 249, 0.95); /* White bg when scrolled */
 }
 
 #mobileMenu .close-btn {
@@ -190,7 +195,7 @@ nav a:hover {
     background-color: #ddd;
 }
 
-/* Mobilni dropdown meni */
+/* Mobile menu dropdown */
 #mobileMenu .dropdown-content {
     position: static;
 }
@@ -235,7 +240,7 @@ nav a:hover {
     font-weight: 600;
 }
 
-/* Prilagajanje za manjše zaslone */
+/* Responsive section */
 @media (max-width: 768px) {
     /* Show mobile logo and name */
     .mobile-logo-container {

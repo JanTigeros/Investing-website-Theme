@@ -16,8 +16,7 @@
 <body>
     <?php include 'navbar.php'; ?>
     <div class="image-container">
-        <img src="img/About-bg.png" alt="Background Image">
-        <!-- Add a container for the text and button -->
+        <img src="img/about-us.png" alt="Background Image">
         <div class="content-overlay">
             <h2 class="overlay-text">Empower the Next Generation</h2>
             <p class="overlay-paragraph">NextGen is at the forefront of creating impactful investments in the future.

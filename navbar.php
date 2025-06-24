@@ -64,7 +64,7 @@ $_SESSION['loggedIn'] = true;
             <li><a href="index.php">NextGenAI</a></li>
             <li><a href="#Pricing">Pricing</a></li>
             <li><a href="#">Partners</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <?php 
                 if ($_SESSION['loggedIn'] == true) {
             ?>

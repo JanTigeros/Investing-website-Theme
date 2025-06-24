@@ -1,70 +1,38 @@
 /* navbar.css */
-html {
-    scroll-behavior: smooth;  /* Smooth scroll animation */
-  }
-  
-  body {
-      margin: 0;
-      padding: 0;
-      font-family: "Kanit", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      background-color: #f9f9f9;
-  }
 
-/* Navbar style */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* === BASE NAVBAR === */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent;
-    color: #f9f9f9;
-    z-index: 1000; /* Navbar on top */
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
     box-sizing: border-box;
-    height: 80px; /* Navbar height setting */
+    height: 80px;
     transition: background-color 0.3s ease, opacity 0.3s ease;
+    background-color: transparent;
+    color: #f9f9f9;
 }
 
-/* navbar style when scrolled */
-.scrolled {
-    background-color: rgba(249, 249, 249, 0.95); /* White bg when scrolled */
-}
-
-.scrolled a {
-    color: green;
-}
-
-.white{
-    color: white !important;
-}
-
-.green a {
-    color: green;
-}
-
-.black a {
-    color: black;
-}
-
-.black a:hover {
-    color: #555;
-}
-
-.black .dropdown-content a {
-    color: black;
-}
-
-
-/* Style for list in navigation */
 nav ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
     display: flex;
 }
 
@@ -74,8 +42,6 @@ nav .right-items {
 }
 
 nav li {
-    margin: 0;
-    padding: 0;
     position: relative;
 }
 
@@ -89,14 +55,64 @@ nav a {
     display: block;
     padding: 14px 20px;
     text-decoration: none;
-    color: #f9f9f9;
+    color: inherit;
 }
 
 nav a:hover {
     color: green;
 }
 
-/* Style for dropdown menu */
+/* === NAVBAR STYLE VARIANTS === */
+nav.white {
+    background-color: transparent;
+    color: white;
+}
+
+nav.white a {
+    color: white;
+}
+
+nav.black {
+    background-color: transparent;
+    color: black;
+}
+
+nav.black a {
+    color: black;
+}
+
+nav.black a:hover {
+    color: #555;
+}
+
+nav.black .dropdown-content a {
+    color: black;
+}
+
+nav.green {
+    background-color: transparent;
+    color: green;
+}
+
+nav.green a {
+    color: green;
+}
+
+/* === SCROLLED STYLES === */
+nav.scrolled {
+    background-color: rgba(249, 249, 249, 0.95);
+}
+
+nav.scrolled a {
+    color: green;
+}
+
+nav.scrolled-mobile {
+    background-color: rgba(249, 249, 249, 0.95);
+    color: green;
+}
+
+/* === DROPDOWN === */
 .dropdown {
     position: relative;
 }
@@ -108,9 +124,8 @@ nav a:hover {
     left: 0;
     background-color: white;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    list-style-type: none;
     padding: 0;
     margin: 0;
 }
@@ -118,8 +133,8 @@ nav a:hover {
 .dropdown-content a {
     color: green;
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
+    text-decoration: none;
 }
 
 .dropdown-content a:hover {
@@ -134,14 +149,13 @@ nav a:hover {
     color: red;
 }
 
-/* Style for mobile */
+/* === MOBILE MENU === */
 .menu-toggle {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* Mobile menu */
 #mobileMenu {
     display: none;
     position: fixed;
@@ -150,19 +164,18 @@ nav a:hover {
     width: 250px;
     height: 100%;
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     z-index: 1001;
     overflow-y: auto;
 }
 
-/* Show mobile menu */
 #mobileMenu.show {
     display: block;
 }
 
-mobile-menu-scrolled {
-    background-color: rgba(249, 249, 249, 0.95); /* White bg when scrolled */
+#mobileMenu.mobile-menu-scrolled {
+    background-color: rgba(249, 249, 249, 0.95);
 }
 
 #mobileMenu .close-btn {
@@ -177,13 +190,11 @@ mobile-menu-scrolled {
 #mobileMenu ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
 #mobileMenu li {
-    margin: 20px;
-    padding: 0;
-    list-style-type: none;
+    margin: 20px 0;
 }
 
 #mobileMenu a {
@@ -195,74 +206,80 @@ mobile-menu-scrolled {
     background-color: #ddd;
 }
 
-/* Mobile menu dropdown */
-#mobileMenu .dropdown-content {
-    position: static;
-}
-
 #mobileMenu .dropdown-content {
     display: none;
     position: static;
     background-color: white;
-    padding: 0;
-    margin: 0;
     box-shadow: none;
 }
 
 #mobileMenu .dropdown-content a {
-    padding: 0px 10px;
-}
-
-#mobileMenu .dropdown a:hover {
-    background-color: #ddd;
+    padding: 0 10px;
 }
 
 #mobileMenu .dropdown.open .dropdown-content {
     display: block;
 }
 
-/* Logo and NextGen Name on the right side of mobile menu */
+/* === MOBILE NAVBAR ELEMENTS === */
 .mobile-logo-container {
-    display: none; /* Hidden by default on larger screens */
+    display: none;
     flex-direction: row;
     align-items: center;
 }
 
 .mobile-logo {
-    width: auto;
     height: 36px;
 }
 
 .mobile-name {
     font-size: 1.4em;
-    color: white;
     margin-left: 20px;
     font-weight: 600;
 }
 
-/* Responsive section */
+/* === MOBILE NAVBAR STYLE VARIANTS === */
+.mobile-white {
+    background-color: transparent;
+    color: white;
+}
+
+.mobile-white a {
+    color: white;
+}
+
+.mobile-black {
+    background-color: transparent;
+    color: black;
+}
+
+.mobile-black a {
+    color: black;
+}
+
+.mobile-green {
+    background-color: transparent;
+    color: green;
+}
+
+.mobile-green a {
+    color: green;
+}
+
 @media (max-width: 768px) {
-    /* Show mobile logo and name */
     .mobile-logo-container {
         display: flex;
     }
 
-    /* Hide default logo and name on left side */
     nav .left-items {
         display: none !important;
     }
 
-    /* Show menu toggle button on mobile */
     .menu-toggle {
         display: block;
     }
 
-    /* Hide navigation links on mobile */
     nav ul {
         display: none !important;
-    }
-
-    .scrolled {
-        display: none;
     }
 }

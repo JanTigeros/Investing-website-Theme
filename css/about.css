@@ -3,19 +3,22 @@
 .image-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* višina strani */
+    height: 100vh;
+    /* višina strani */
     display: flex;
-    align-items: flex-end; /* postavi vsebino spodaj */
+    align-items: flex-end;
+    /* postavi vsebino spodaj */
     justify-content: center;
     overflow: hidden;
 }
 
 .image-container img {
     position: absolute;
+    top: 0;
     width: 40%;
     left: 50%;
-    height: auto;
-    max-height: 764px; /* maksimalna višina slike */
+    height: 100vh;
+    /* višina slike */
     object-fit: cover;
     opacity: 0.8;
 }
@@ -25,11 +28,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers the content */
+    transform: translate(-50%, -50%);
+    /* Centers the content */
     text-align: center;
     color: black;
     padding: 0 20px;
-    width: 100%; /* Ensures content is centered */
+    width: 100%;
+    /* Ensures content is centered */
 }
 
 .overlay-text {
@@ -45,15 +50,18 @@
     color: #555;
     margin-bottom: 30px;
     line-height: 1.6;
-    max-width: 80%; /* Prevent text from getting too wide */
+    max-width: 80%;
+    /* Prevent text from getting too wide */
     margin-left: auto;
-    margin-right: auto; /* Center the paragraph */
+    margin-right: auto;
+    /* Center the paragraph */
 }
 
 .overlay-button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #4CAF50; /* Green button */
+    background-color: #4CAF50;
+    /* Green button */
     color: black;
     border: none;
     border-radius: 5px;
@@ -63,19 +71,184 @@
 }
 
 .overlay-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
+    /* Darker green on hover */
     box-shadow: 0px 4px 20px #45a049;
     color: white;
+}
+
+/* About section styles */
+
+.about-milestones {
+    margin: 0 auto;
+    padding: 6rem 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 3rem;
+    background: linear-gradient(to top, #f9fff9, #F9F9F9);
+    justify-content: center;
+}
+
+.milestone {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.milestone .badge {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: green;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(39, 174, 96, 0.2);
+}
+
+.milestone .content {
+    max-width: 100%;
+}
+
+.milestone h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.milestone p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Infographic styles */
+
+.infographic-modern {
+    position: relative;
+    padding: 5rem 10%;
+    background: linear-gradient(to bottom right, #f4fff7, #ffffff);
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.infographic-modern h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    color: #222;
+    position: relative;
+    z-index: 2;
+}
+
+.infographic-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Stat elements */
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+
+.icon img {
+    width: 48px;
+}
+
+.info .number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: green;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Floating cube backgrounds */
+.bg-cube {
+    position: absolute;
+    width: 200px;
+    opacity: 0.1;
+    pointer-events: none;
+    filter: blur(1px);
+    z-index: 0;
+}
+
+@keyframes float1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.cube1 {
+    top: 10%;
+    left: 5%;
+    animation: float1 7s ease-in-out infinite;
+}
+
+.cube2 {
+    top: 30%;
+    right: 10%;
+    animation: float2 9s ease-in-out infinite;
+}
+
+.cube3 {
+    bottom: 5%;
+    left: 40%;
+    animation: float3 6s ease-in-out infinite;
 }
 
 /* Prilagoditve za večje zaslone (namizje) */
 @media (min-width: 768px) {
     .content-overlay {
         text-align: left;
-        left: 10%; /* Align to the left */
+        left: 10%;
+        /* Align to the left */
         right: 50%;
-        transform: translate(0, -50%); /* Keep it vertically centered but aligned left */
-        width: 50%; /* Content will be limited to the left half of the screen */
+        transform: translate(0, -50%);
+        /* Keep it vertically centered but aligned left */
+        width: 50%;
+        /* Content will be limited to the left half of the screen */
     }
 
     .overlay-text {
@@ -87,7 +260,8 @@
 
     .overlay-paragraph {
         font-size: 1.1em;
-        max-width: 50%; /* Center text in the left half */
+        max-width: 50%;
+        /* Center text in the left half */
         margin-left: 0;
         margin-right: auto;
     }
@@ -119,14 +293,42 @@
     .overlay-text {
         font-size: 2em;
         color: white;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
     }
 
     .overlay-paragraph {
         font-size: 0.8em;
         max-width: 100%;
-        color:white;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .about-milestones {
+        grid-template-columns: 1fr;
+        padding-bottom: 0%;
+    }
+
+    .infographic-modern {
+        padding-top: 0%;
+    }
+
+    .infographic-modern h2 {
+        font-size: 2rem;
+        padding: 5rem 2%;
+    }
+
+    .infographic-grid {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .cube2 {
+        top: 35%;
+    }
+
+    .cube3 {
+        bottom: -5%;
+        left: 15%;
     }
 }
 
